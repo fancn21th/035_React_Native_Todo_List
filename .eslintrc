@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "rules": {
+    "react/jsx-filename-extension": "off"
+  }
+}
