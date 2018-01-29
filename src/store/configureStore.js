@@ -9,6 +9,10 @@ const configureStore = () => {
   }
   return createStore(
     todoApp,
+    // todo: the config below is for dev only
+    /* eslint-disable */
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    /* eslint-enable */
     applyMiddleware(...middlewares),
   );
 };
