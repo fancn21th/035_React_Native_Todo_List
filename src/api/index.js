@@ -1,21 +1,21 @@
-import { v4 } from 'node-uuid';
+import uuidv1 from 'uuid/v1';
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const fakeTodos = {
   todos: [
     {
-      id: v4(),
+      id: uuidv1(),
       text: 'I want to do this 1stly',
       completed: false,
     },
     {
-      id: v4(),
+      id: uuidv1(),
       text: 'I want to do this 2ndly',
       completed: true,
     },
     {
-      id: v4(),
+      id: uuidv1(),
       text: 'I want to do this 3rdly',
       completed: false,
     },
