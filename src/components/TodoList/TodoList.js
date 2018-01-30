@@ -12,29 +12,14 @@ import {
   Fab,
   Icon,
 } from 'native-base';
-import {
-  View,
-} from 'react-native';
 
 import HeaderFilter from '../TodoFilter';
 
 const TodoList = () => (
   <Container>
-    <Header hasSegment>
-      <Body>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <HeaderFilter />
-        </View>
-      </Body>
-    </Header>
-    <Content>
+    <Header hasSegment />
+    <HeaderFilter />
+    <Content padder>
       <List>
         <ListItem>
           <Body>
