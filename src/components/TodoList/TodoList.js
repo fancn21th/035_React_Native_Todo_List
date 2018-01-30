@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Body,
   Header,
@@ -16,11 +17,11 @@ import {
 } from 'native-base';
 import TodoFilter from '../TodoFilter';
 
-const TodoList = () => (
+const TodoList = ({ navigation }) => (
   <Container>
     <Header hasTabs>
       <Left>
-        <Button transparent onPress={() => this.props.navigation.goBack()}>
+        <Button transparent onPress={() => navigation.goBack()}>
           <Icon name="arrow-back" />
         </Button>
       </Left>
@@ -41,9 +42,7 @@ const TodoList = () => (
             <Text>Name of the product</Text>
           </Body>
           <Right>
-            <CheckBox
-              checked={false}
-            />
+            <CheckBox checked={false} />
           </Right>
         </ListItem>
         <ListItem>
@@ -51,9 +50,7 @@ const TodoList = () => (
             <Text>Name of the product</Text>
           </Body>
           <Right>
-            <CheckBox
-              checked={false}
-            />
+            <CheckBox checked={false} />
           </Right>
         </ListItem>
       </List>
@@ -61,5 +58,8 @@ const TodoList = () => (
   </Container>
 );
 
-export default TodoList;
+TodoList.propTypes = {
+  navigation: PropTypes.shape({}).isRequired,
+};
 
+export default TodoList;
