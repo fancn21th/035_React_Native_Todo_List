@@ -7,7 +7,7 @@ export default StackNavigator(
     Todos: {
       screen: Todos,
       navigationOptions: {
-        header: () => null,
+        headerTitle: 'Todo List',
       },
 
     },

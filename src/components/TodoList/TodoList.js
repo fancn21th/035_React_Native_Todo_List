@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Body,
+  Header,
   Container,
   Content,
   Right,
@@ -15,6 +16,7 @@ import HeaderFilter from '../TodoFilter';
 
 const TodoList = () => (
   <Container>
+    <Header />
     <HeaderFilter />
     <Content>
       <List>
