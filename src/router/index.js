@@ -19,6 +19,7 @@ export default StackNavigator(
     },
   },
   {
-    headerMode: 'screen',
+    initialRouteName: 'Todos',
+    headerMode: 'none',
   },
 );

@@ -9,16 +9,31 @@ import {
   CheckBox,
   List,
   ListItem,
-  Fab,
+  Left,
+  Button,
+  Title,
   Icon,
 } from 'native-base';
-
-import HeaderFilter from '../TodoFilter';
+import TodoFilter from '../TodoFilter';
 
 const TodoList = () => (
   <Container>
-    <Header hasSegment />
-    <HeaderFilter />
+    <Header hasTabs>
+      <Left>
+        <Button transparent onPress={() => this.props.navigation.goBack()}>
+          <Icon name="arrow-back" />
+        </Button>
+      </Left>
+      <Body>
+        <Title>Todo List</Title>
+      </Body>
+      <Right>
+        <Button transparent>
+          <Icon name="search" />
+        </Button>
+      </Right>
+    </Header>
+    <TodoFilter />
     <Content padder>
       <List>
         <ListItem>
@@ -43,12 +58,6 @@ const TodoList = () => (
         </ListItem>
       </List>
     </Content>
-    <Fab
-      style={{ backgroundColor: '#5067FF' }}
-      position="bottomRight"
-    >
-      <Icon name="add" />
-    </Fab>
   </Container>
 );
 

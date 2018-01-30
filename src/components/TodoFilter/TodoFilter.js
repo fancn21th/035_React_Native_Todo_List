@@ -7,13 +7,18 @@ import {
 
 const TodoFilter = () => (
   <Segment>
-    <Button first>
+    <Button
+      first
+      active
+    >
       <Text>All</Text>
     </Button>
     <Button>
       <Text>Active</Text>
     </Button>
-    <Button last active>
+    <Button
+      last
+    >
       <Text>Completed</Text>
     </Button>
   </Segment>
