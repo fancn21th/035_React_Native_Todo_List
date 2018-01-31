@@ -54,10 +54,15 @@ class TodoListContainer extends Component {
   }
 }
 
+TodoListContainer.defaultProps = {
+  errorMessage: '',
+  todos: [],
+};
+
 TodoListContainer.propTypes = {
   filter: PropTypes.string.isRequired,
-  errorMessage: PropTypes.string.isRequired,
-  todos: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  errorMessage: PropTypes.string,
+  todos: PropTypes.arrayOf(PropTypes.shape({})),
   toggleTodo: PropTypes.func.isRequired,
   fetchTodos: PropTypes.func.isRequired,
   isFetching: PropTypes.bool.isRequired,

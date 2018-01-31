@@ -4,6 +4,7 @@
     "ecmaVersion": 8
   },
   "rules": {
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "no-case-declarations": "off"
   }
 }

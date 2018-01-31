@@ -5,15 +5,11 @@ const createList = (filter) => {
     switch (action.type) {
       case 'FETCH_TODOS_SUCCESS':
         return action.filter === filter ?
-          action.response.result :
+          action.response.map(todo => todo.id) :
           state;
       case 'ADD_TODO_SUCCESS':
         return filter !== 'completed' ?
-          [...state, action.response.result] :
-          state;
-      case 'TOGGLE_TODO_SUCCESS':
-        return filter !== 'all' ?
-          state.filter(id => id !== action.response.result) :
+          [...state, action.response.id] :
           state;
       default:
         return state;
@@ -25,9 +21,9 @@ const createList = (filter) => {
       return state;
     }
     switch (action.type) {
-      case 'REQUEST_TODOS':
-        return true;
       case 'FETCH_TODOS_REQUEST':
+        return true;
+      case 'FETCH_TODOS_SUCCESS':
       case 'FETCH_TODOS_FAILURE':
         return false;
       default:
