@@ -1,26 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Body,
-  Right,
-  Text,
-  CheckBox,
   List,
-  ListItem,
 } from 'native-base';
+import Todo from './Todo';
 
 const TodoList = ({ todos }) => (
   <List>
     {
       todos.map(todo => (
-        <ListItem key={todo.id}>
-          <Body>
-            <Text>{todo.text}</Text>
-          </Body>
-          <Right>
-            <CheckBox checked={todo.completed} />
-          </Right>
-        </ListItem>
+        <Todo
+          key={todo.id}
+          {...todo}
+        />
       ))
     }
   </List>
