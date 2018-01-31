@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
-import App from './components/App';
+import Navigator from './components/Navigator';
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <App />
+    <Navigator />
   </Provider>
 );
 

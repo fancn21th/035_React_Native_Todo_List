@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addNavigationHelpers } from 'react-navigation';
 import Navigator from '../../router';
 
-const App = ({ dispatch, nav }) => (
+const NavigatorContainer = ({ dispatch, nav }) => (
   <Navigator
     navigation={addNavigationHelpers({
       dispatch,
@@ -17,9 +17,9 @@ const mapStateToProps = state => ({
   nav: state.nav,
 });
 
-App.propTypes = {
+NavigatorContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
   nav: PropTypes.shape({}).isRequired,
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(NavigatorContainer);
