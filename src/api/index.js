@@ -23,7 +23,7 @@ const fakeTodos = {
 };
 
 export const fetchTodos = filter =>
-  delay(2000).then(() => {
+  delay(1000).then(() => {
     if (Math.random() > 0.9) {
       throw new Error('Boom!');
     }
@@ -40,7 +40,7 @@ export const fetchTodos = filter =>
   });
 
 export const addTodo = text =>
-  delay(2000).then(() => {
+  delay(1000).then(() => {
     const todo = {
       id: uuidv1(),
       text,
@@ -51,7 +51,7 @@ export const addTodo = text =>
   });
 
 export const toggleTodo = id =>
-  delay(2000).then(() => {
+  delay(1000).then(() => {
     const todo = fakeTodos.todos.find(t => t.id === id);
     todo.completed = !todo.completed;
     return todo;

@@ -7,6 +7,8 @@ const mapStateToProps = (state, { filter, navigation, children }) => {
   return {
     active: filter === filterParams,
     children,
+    isFirst: filter === 'all',
+    isLast: filter === 'completed',
   };
 };
 
