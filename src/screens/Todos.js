@@ -32,7 +32,7 @@ const Todos = ({ navigation }) => (
         </Button>
       </Right>
     </Header>
-    <TodoFilter />
+    <TodoFilter navigation={navigation} />
     <Content padder>
       <TodoList navigation={navigation} />
     </Content>

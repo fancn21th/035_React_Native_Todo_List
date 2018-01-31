@@ -1,27 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Segment,
-  Button,
   Text,
 } from 'native-base';
+import FilterButtonContainer from './FilterButtonContainer';
 
-const TodoFilter = () => (
+const TodoFilter = ({ navigation }) => (
   <Segment>
-    <Button
-      first
-      active
+    <FilterButtonContainer
+      filter="all"
+      navigation={navigation}
     >
       <Text>All</Text>
-    </Button>
-    <Button>
+    </FilterButtonContainer>
+    <FilterButtonContainer
+      filter="active"
+      navigation={navigation}
+    >
       <Text>Active</Text>
-    </Button>
-    <Button
-      last
+    </FilterButtonContainer>
+    <FilterButtonContainer
+      filter="completed"
+      navigation={navigation}
     >
       <Text>Completed</Text>
-    </Button>
+    </FilterButtonContainer>
   </Segment>
 );
+
+TodoFilter.propTypes = {
+  navigation: PropTypes.shape({}).isRequired,
+};
 
 export default TodoFilter;

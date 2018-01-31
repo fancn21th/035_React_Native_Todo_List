@@ -70,7 +70,7 @@ TodoListContainer.propTypes = {
 };
 
 const mapStateToProps = (state, { navigation }) => {
-  const filter = 'all';
+  const filter = navigation.state.params && navigation.state.params.filter ? navigation.state.params.filter : 'all';
   return {
     // for now the component do not rely on the state shape anymore
     todos: getVisibleTodos(state, filter),
