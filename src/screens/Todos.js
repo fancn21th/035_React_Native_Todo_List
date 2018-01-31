@@ -39,6 +39,7 @@ const Todos = ({ navigation }) => (
     <Fab
       style={{ backgroundColor: '#5067FF' }}
       position="bottomRight"
+      onPress={() => navigation.navigate('AddTodo')}
     >
       <Icon name="add" />
     </Fab>
