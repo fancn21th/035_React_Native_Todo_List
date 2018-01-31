@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 const FetchError = ({ message, onRetry }) => (
   <View>
     <Text>Could not fetch todos. {message}</Text>
-    <Button onClick={onRetry}>Retry</Button>
+    <Button onPress={onRetry}>Retry</Button>
   </View>
 );
 

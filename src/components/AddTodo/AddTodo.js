@@ -16,8 +16,9 @@ import {
   Form,
   Text,
 } from 'native-base';
+import { Keyboard } from 'react-native';
 
-const AddTodo = ({ navigation }) => (
+const AddTodo = ({ navigation, addTodo }) => (
   <Container>
     <Header>
       <Left>
@@ -34,10 +35,27 @@ const AddTodo = ({ navigation }) => (
       <Form>
         <Item fixedLabel>
           <Label>Todo Name</Label>
-          <Input />
+          <Input
+            ref={
+              (input) => { AddTodo.textInput = input; }
+            }
+            onChangeText={
+              (text) => { AddTodo.text = text; }
+            }
+          />
         </Item>
       </Form>
-      <Button block style={{ margin: 15, marginTop: 50 }}>
+      <Button
+        block
+        style={{ margin: 15, marginTop: 50 }}
+        onPress={() => {
+          Keyboard.dismiss();
+          if (AddTodo.text) {
+            addTodo(AddTodo.text);
+            navigation.navigate('Todos');
+          }
+        }}
+      >
         <Text>Add</Text>
       </Button>
     </Content>
@@ -46,6 +64,7 @@ const AddTodo = ({ navigation }) => (
 
 AddTodo.propTypes = {
   navigation: PropTypes.shape({}).isRequired,
+  addTodo: PropTypes.func.isRequired,
 };
 
 export default AddTodo;

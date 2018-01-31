@@ -1,4 +1,4 @@
-import AddTodo from './AddTodo';
+import AddTodoContainer from './AddTodoContainer';
 
-export default AddTodo;
+export default AddTodoContainer;
 
