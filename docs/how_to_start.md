@@ -1,5 +1,5 @@
 #  How to start your development of React Native App
-#### React Native 开发 新手指南
+#### React Native 开发指南
 
 ## 👋 Steps
 #### 步骤

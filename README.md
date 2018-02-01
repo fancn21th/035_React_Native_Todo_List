@@ -1,33 +1,58 @@
 # 035_React_Native_Todo_List
-React_Native_Todo_List Training Demo
+### React Native 程序开发模板
 
-## Development
+---
 
-### Prerequisites
-- node.js
-- React Native
-- iOS development environment (Xcode)
-- Android development environment (JDK, Android SDK, Android Studio)
+## 👋 Common Tools 开发工具
 
-### Project Structure
+- __Flux architecture__
+    - [Redux](https://redux.js.org/docs/introduction/)
+    - [React Native Debugger](https://github.com/jhen0409/react-native-debugger)
+- __Routing and navigation__
+    - [React Navigation](https://reactnavigation.org) for native mobile
+- __Data Caching / Offline__
+    - TBD
+- __UI Toolkit__
+    - [Native Base](https://nativebase.io/) for native mobile
+- __User authentication__
+    - TBD
+- __Code Linting__ with
+   - [Airbnb's JS Linting](https://github.com/airbnb/javascript) guidelines
+
+---
+
+## 🚀 Getting Started 启动
+
+#### 1. Clone and Install
+
+```bash
+# Clone the repo
+https://github.com/fancn21th/0_35_React_Native_Todo_List
+
+# Install dependencies
+npm i
 ```
-.
-├── build                            # 
-├── src                              # 
-│   └── components                   # 
-│   │   └── ComponentName            # 
-│   │        ├── index.js            # 
-│   │        └── style.js            # 
-│   └── styles                       # 
-│   │   ├── colors.js                # 
-│   │   └── fonts.js                 # 
-│   │
-│   └── index.js                     # index
-│   └── reducers.js                  # reducers
-│   └── routes.js                    # routes
-│   └── store.js                     # store
-└── .editorconfig                    # editorconfig
-└── .gitignore                       # gitignore
-└──
-└── README.md                        # README
+
+#### 2.1. Run the _React Native_ App on Mac
+
+```bash
+# Start the React Native App
+npm run ios
 ```
+
+Instructions for dev environment setup is _coming soon_
+
+#### 2.2. Run the _React Native_ App on Windows
+
+```bash
+# Start the React Native App
+npm run android
+```
+
+Instructions for dev environment setup is _coming soon_
+
+---
+
+## 📖 Docs 文档
+- [React Native 开发指南](/docs/how_to_start.md)
+- [File Structure 文件夹结构](/docs/file_structure.md)
