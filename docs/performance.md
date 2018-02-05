@@ -16,6 +16,8 @@
 ## 性能优化工具
 
 - [Profiling](https://facebook.github.io/react-native/docs/performance.html#profiling)
+- Systrace
+- [react-addons-perf](https://reactjs.org/docs/perf.html)
 
 ## 性能优化技巧
 
