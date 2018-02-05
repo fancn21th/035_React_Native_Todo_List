@@ -81,7 +81,7 @@ class MyComponent extends React.PureComponent {
 ## 📖 Docs 文档
 
 ### Top 10 articles from google 
-(except for office docs from Facebook already included above)
+[Two official documents from Facebook already included above]
 - [Dive into React Native performance](https://code.facebook.com/posts/895897210527114/dive-into-react-native-performance/)
 - [A visual guide to React Native Performance](https://codeburst.io/a-visual-guide-to-react-native-performance-issues-and-resolving-insights-ccb0fc3fbcda)
 - [React Native Performance: Major issues and insights on improving your app’s performance](https://www.simform.com/react-native-app-performance/)
