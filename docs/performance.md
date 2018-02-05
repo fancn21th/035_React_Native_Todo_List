@@ -77,3 +77,21 @@ class MyComponent extends React.PureComponent {
 ~~~
 - [Don’t update state or dispatch actions in componentWillUpdate](https://codeburst.io/6-simple-ways-to-speed-up-your-react-native-app-d5b775ab3f16)
 - [Use Perf monitor to watch FPS](https://codeburst.io/6-simple-ways-to-speed-up-your-react-native-app-d5b775ab3f16)
+
+## 📖 Docs 文档
+
+### Top 10 articles from google 
+(except for office docs from Facebook already included above)
+- [Dive into React Native performance](https://code.facebook.com/posts/895897210527114/dive-into-react-native-performance/)
+- [A visual guide to React Native Performance](https://codeburst.io/a-visual-guide-to-react-native-performance-issues-and-resolving-insights-ccb0fc3fbcda)
+- [React Native Performance: Major issues and insights on improving your app’s performance](https://www.simform.com/react-native-app-performance/)
+- [6 TIPS YOU WANT TO KNOW ABOUT REACT NATIVE PERFORMANCE](https://www.simplytechnologies.net/blog/2017/6/6/6-tips-you-want-to-know-about-react-native-performance)
+- [Performance Limitations of React Native and How to Overcome Them](https://medium.com/@talkol/performance-limitations-of-react-native-and-how-to-overcome-them-947630d7f440)
+- [Solving Over 35 performance Issues in React Native](https://dev.to/purvak_pathak/react-native-performance-issues-and-insights-on-improving-it-b39)
+- [I made React Native fast, you can too](https://launchdrawer.com/i-made-react-native-fast-you-can-too-9e61c951ce0)
+- [Bridging in React Native](https://tadeuzagallo.com/blog/react-native-bridge/)
+
+### Books
+- [React and React Native](https://www.safaribooksonline.com/library/view/react-and-react/9781786465658/ch01s05.html)
+- [React Native - Building Mobile Apps with JavaScript](https://www.safaribooksonline.com/library/view/react-native-/9781787282537/80343205-ed72-4bed-a2e6-1db14ebf29b1.xhtml)
+- [Mastering React Native](https://www.safaribooksonline.com/library/view/mastering-react-native/9781785885785/ch11s02.html)
