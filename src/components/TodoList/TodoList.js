@@ -5,13 +5,14 @@ import {
 } from 'native-base';
 import Todo from './Todo';
 
-const TodoList = ({ todos }) => (
+const TodoList = ({ todos, onToggleTodo }) => (
   <List>
     {
       todos.map(todo => (
         <Todo
           key={todo.id}
           {...todo}
+          onToggleTodo={() => onToggleTodo(todo.id)}
         />
       ))
     }
@@ -20,6 +21,7 @@ const TodoList = ({ todos }) => (
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  onToggleTodo: PropTypes.func.isRequired,
 };
 
 export default TodoList;

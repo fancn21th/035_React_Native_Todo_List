@@ -9,13 +9,16 @@ import {
 } from 'native-base';
 import style from './styles';
 
-const Todo = ({ text, completed }) => (
+const Todo = ({ text, completed, onToggleTodo }) => (
   <ListItem>
     <Body>
       <Text style={[completed && style.completed]}>{text}</Text>
     </Body>
     <Right>
-      <CheckBox checked={completed} />
+      <CheckBox
+        checked={completed}
+        onPress={onToggleTodo}
+      />
     </Right>
   </ListItem>
 );
@@ -23,6 +26,7 @@ const Todo = ({ text, completed }) => (
 Todo.propTypes = {
   text: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
+  onToggleTodo: PropTypes.func.isRequired,
 };
 
 export default Todo;
