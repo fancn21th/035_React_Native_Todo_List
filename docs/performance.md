@@ -49,7 +49,7 @@ class MyComponent extends React.PureComponent {
 }
 ~~~
 - [Bind early and don’t create functions inside render](https://codeburst.io/6-simple-ways-to-speed-up-your-react-native-app-d5b775ab3f16)
-~~~javacript
+~~~javascript
 // do this
 class MyComponent extends React.PureComponent {
   
@@ -68,7 +68,7 @@ class MyComponent extends React.PureComponent {
   
 }
 ~~~
-~~~javacript
+~~~html
 // do not do this
 <Text onPress={ () => this.doWork() }>Do Some Work</Text>
 
