@@ -17,8 +17,9 @@
 - __User authentication__
     - TBD
 - __Code Linting__ with
-   - [Airbnb's JS Linting](https://github.com/airbnb/javascript) guidelines
-
+    - [Airbnb's JS Linting](https://github.com/airbnb/javascript) guidelines
+- __Code Formatter__ with
+    - [prettier](https://github.com/prettier/prettier)
 ---
 
 ## 🚀 Getting Started 启动
@@ -56,3 +57,4 @@ Instructions for dev environment setup is _coming soon_
 ## 📖 Docs 文档
 - [React Native 开发指南](/docs/how_to_start.md)
 - [File Structure 文件夹结构](/docs/file_structure.md)
+- [Perforamce 性能优化](/docs/performance.md)
