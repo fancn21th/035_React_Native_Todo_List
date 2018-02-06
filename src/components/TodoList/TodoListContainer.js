@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { withNavigation } from 'react-navigation';
 import {
   Spinner,
 } from 'native-base';
@@ -78,7 +79,7 @@ const mapStateToProps = (state, { navigation }) => {
   };
 };
 
-export default connect(mapStateToProps, {
+export default withNavigation(connect(mapStateToProps, {
   toggleTodo, // mapDispatchToProps shorthand notation, no need to call dispatch explicitly
   fetchTodos,
-})(TodoListContainer);
+})(TodoListContainer));
