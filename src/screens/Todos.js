@@ -32,9 +32,9 @@ const Todos = ({ navigation }) => (
         </Button>
       </Right>
     </Header>
-    <TodoFilter navigation={navigation} />
+    <TodoFilter />
     <Content padder>
-      <TodoList navigation={navigation} />
+      <TodoList />
     </Content>
     <Fab
       style={{ backgroundColor: '#5067FF' }}

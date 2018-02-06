@@ -39,7 +39,6 @@ class TodoListContainer extends Component {
       toggleTodo,
       isFetching,
       errorMessage,
-      navigation,
     } = this.props;
     /* eslint-enable no-shadow */
     if (isFetching && !todos.length) {
@@ -50,7 +49,7 @@ class TodoListContainer extends Component {
         <FetchError message={errorMessage} onRetry={() => this.fetchData()} />
       );
     }
-    return <TodoList todos={todos} onToggleTodo={toggleTodo} navigation={navigation} />;
+    return <TodoList todos={todos} onToggleTodo={toggleTodo} />;
   }
 }
 
@@ -66,7 +65,6 @@ TodoListContainer.propTypes = {
   toggleTodo: PropTypes.func.isRequired,
   fetchTodos: PropTypes.func.isRequired,
   isFetching: PropTypes.bool.isRequired,
-  navigation: PropTypes.shape({}).isRequired,
 };
 
 const mapStateToProps = (state, { navigation }) => {
@@ -77,7 +75,6 @@ const mapStateToProps = (state, { navigation }) => {
     filter,
     isFetching: getIsFetching(state, filter),
     errorMessage: getErrorMessage(state, filter),
-    navigation,
   };
 };
 

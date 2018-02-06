@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withNavigation } from 'react-navigation';
 import FilterButton from './FilterButton';
 
 const mapStateToProps = (state, { filter, navigation, children }) => {
@@ -18,4 +19,4 @@ const mapDispatchToProps = (dispatch, { filter, navigation }) => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(FilterButton);
+export default withNavigation(connect(mapStateToProps, mapDispatchToProps)(FilterButton));
