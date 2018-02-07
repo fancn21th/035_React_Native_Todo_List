@@ -24,3 +24,10 @@ export const getIsFetching = (state, filter) => fromList.getIsFetching(state.lis
 
 export const getErrorMessage =
   (state, filter) => fromList.getErrorMessage(state.listByFilter[filter]);
+
+// export const getNavKeyByFilter = (state, filter) => {
+//   const match = state.nav.routers.find(route =>
+//     route.params.filter && route.params.filter === filter);
+//   if (match) return match.key;
+//   return null;
+// };

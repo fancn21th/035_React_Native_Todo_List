@@ -12,8 +12,8 @@ import {
   Icon,
   Fab,
 } from 'native-base';
-import TodoFilter from '../components/TodoFilter';
-import TodoList from '../components/TodoList';
+import TodoFilter from '../../components/TodoFilter/index';
+import TodoList from '../../components/TodoList/index';
 
 const Todos = ({ navigation }) => (
   <Container>
