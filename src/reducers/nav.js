@@ -18,7 +18,7 @@ const navMiddleware = createReactNavigationReduxMiddleware(
 
 const addListener = createReduxBoundAddListener('root');
 
-export default {
+export {
   navReducer,
   navMiddleware,
   addListener,
