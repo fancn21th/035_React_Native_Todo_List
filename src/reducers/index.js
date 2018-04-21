@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import nav from './nav';
+import { navReducer } from './nav';
 import byId, * as fromById from './byId';
 import createList, * as fromList from './createList';
 
@@ -12,7 +12,7 @@ const listByFilter = combineReducers({
 const todos = combineReducers({
   byId,
   listByFilter,
-  nav,
+  nav: navReducer,
 });
 
 export default todos;

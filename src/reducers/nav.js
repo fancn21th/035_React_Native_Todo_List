@@ -1,9 +1,25 @@
-import { NavigationActions } from 'react-navigation';
+import {
+  createReduxBoundAddListener,
+  createReactNavigationReduxMiddleware,
+} from 'react-navigation-redux-helpers';
 import Navigator from '../router';
 
-const initialState = Navigator.router.getStateForAction(NavigationActions.init());
+const initialState = Navigator.router.getStateForAction(Navigator.router.getActionForPathAndParams('Todos'));
 
-export default (state = initialState, actions) => {
+const navReducer = (state = initialState, actions) => {
   const nextState = Navigator.router.getStateForAction(actions, state);
   return nextState || state;
+};
+
+const navMiddleware = createReactNavigationReduxMiddleware(
+  'root',
+  state => state.nav,
+);
+
+const addListener = createReduxBoundAddListener('root');
+
+export default {
+  navReducer,
+  navMiddleware,
+  addListener,
 };

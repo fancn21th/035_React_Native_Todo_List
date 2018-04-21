@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addNavigationHelpers } from 'react-navigation';
 import Navigator from '../../router';
+import { addListener } from '../../reducers/nav';
 
 const NavigatorContainer = ({ dispatch, nav }) => (
   <Navigator
     navigation={addNavigationHelpers({
       dispatch,
       state: nav,
+      addListener,
     })}
   />
 );
